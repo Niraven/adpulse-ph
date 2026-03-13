@@ -1,0 +1,37 @@
+{
+  "name": "adpulse-extension",
+  "displayName": "AdPulse - Meta Ads Manager",
+  "version": "1.0.0",
+  "description": "Manage all your Facebook/Meta ad accounts, Business Managers, and Fan Pages from one dashboard.",
+  "author": "AdPulse PH",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package"
+  },
+  "dependencies": {
+    "plasmo": "^0.90.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.287",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.7.2",
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.20"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://www.facebook.com/*",
+      "https://business.facebook.com/*",
+      "https://adsmanager.facebook.com/*"
+    ],
+    "permissions": [
+      "storage",
+      "activeTab"
+    ]
+  }
+}
