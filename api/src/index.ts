@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import { authRouter } from "./routes/auth"
 import { accountsRouter } from "./routes/accounts"
 import { exportRouter } from "./routes/export"
+import { paymentsRouter } from "./routes/payments"
 
 dotenv.config()
 
@@ -22,6 +23,7 @@ app.get("/api/health", (req, res) => {
 app.use("/api/auth", authRouter)
 app.use("/api/accounts", accountsRouter)
 app.use("/api/export", exportRouter)
+app.use("/api/payments", paymentsRouter)
 
 app.listen(PORT, () => {
   console.log(`AdPulse API running on port ${PORT}`)
